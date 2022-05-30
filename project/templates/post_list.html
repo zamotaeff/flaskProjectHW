@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Поиск{% endblock %}
+
+{% block page_title %}Найдено постов {{ items|count }}{% endblock %}
+
+{% block content %}
+    <div class="body-wrap">
+        {% for item in items %}
+            <div class="post">
+                <img src="{{ item.pic }}" alt="">
+                <p>{{ item.content }}</p>
+            </div>
+            <hr>
+        {% else %}
+            <p>Посты не найдены. Попробуйте другой запрос.</p>
+        {% endfor %}
+    </div>
+{% endblock %}

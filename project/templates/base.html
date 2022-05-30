@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+<header>
+    <div class="header-wrap block-effect">
+        <h1>{% block page_title %}{% endblock %}</h1>
+    </div>
+</header>
+
+<nav>
+    {% include 'nav.html' %}
+</nav>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+<footer>
+    <div class="footer-wrap block-effect">
+        <p><em></em></p>
+    </div>
+</footer>
+</body>
+</html>

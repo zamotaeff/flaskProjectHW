@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block page_title %}Главная{% endblock %}
+
+{% block content %}
+    <div class="body-wrap">
+        <div class="form-wrap block-effect">
+            <form action="/search/" method="get" class="">
+                <input name="s" type="text" placeholder="">
+                <input class="btn btn-card" value="Найти" type="submit">
+            </form>
+        </div>
+    </div>
+    {% for item in items %}
+        <div class="post">
+        <img src="{{ item.pic }}" alt="">
+        <p>{{ item.content }}</p>
+    </div>
+    <hr>
+    {% endfor %}
+{% endblock %}

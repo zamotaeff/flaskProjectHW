@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Пост загружен{% endblock %}
+
+{% block page_title %}Новый пост создан{% endblock %}
+
+{% block content %}
+
+    <div class="post">
+        <img src="{{ picture }}" alt="Изображение поста">
+        <p>{{ content }}</p>
+    </div>
+
+    <hr>
+
+{% endblock %}
